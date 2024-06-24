@@ -21,7 +21,7 @@ restart-service:
 down-service:
 	docker-compose -f $(DOCKER_COMPOSE_SERVICE) down
 
-################## SYSTEAM ##################
+################## DB, NGINX ##################
 build:
 	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) up -d --build
 
@@ -29,7 +29,10 @@ down:
 	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) down
 
 ################## RUN ALL ##################
-run-all:
+build-all:
 	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) -f $(DOCKER_COMPOSE_SERVICE) up -d --build
+down-all:
+	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) -f $(DOCKER_COMPOSE_SERVICE) down
+
 
 
