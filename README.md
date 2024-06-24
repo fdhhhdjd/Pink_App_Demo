@@ -11,18 +11,10 @@
 
 ## Team Word: Liên hệ công việc https://profile-forme.com
 
-## 1. Nguyen Tien Tai( MainTain 🚩).
+## Run Source
 
-## Tài Khoản Donate li Cf để có động lực code cho anh em tham khảo 😄.
+```
+    1. npm install -D
 
-![giphy](https://3.bp.blogspot.com/-SzGvXn2sTmw/V6k-90GH3ZI/AAAAAAAAIsk/Q678Pil-0kITLPa3fD--JkNdnJVKi_BygCLcB/s1600/cf10-fbc08%2B%25281%2529.gif)
-
-## Mk: NGUYEN TIEN TAI
-
-## STK: 1651002972052
-
-## Chi Nhánh: NGAN HANG TMCP AN BINH (ABBANK).
-
-## SUPPORT CONTACT: [https://profile-forme.com](https://profile-forme.com)
-
-## Thank You <3.
+    2. make run build
+```

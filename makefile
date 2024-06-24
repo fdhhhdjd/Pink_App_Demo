@@ -3,15 +3,33 @@ include .env
 export $(shell sed 's/=.*//' .env)
 
 # Folder constants
-DOCKER_COMPOSE := docker-compose.yml
+DOCKER_COMPOSE_SYSTEM := docker-compose.yml
+DOCKER_COMPOSE_SERVICE := docker-compose-service.yml
+
 
 # Run auto
-default:
+test:
 	docker ps
 
+################## SERVICE ##################
+build-service:
+	docker-compose -f $(DOCKER_COMPOSE_SERVICE) up -d --build
+
+restart-service:
+	docker-compose -f $(DOCKER_COMPOSE_SERVICE) restart
+
+down-service:
+	docker-compose -f $(DOCKER_COMPOSE_SERVICE) down
+
+################## SYSTEAM ##################
 build:
-	docker-compose -f $(DOCKER_COMPOSE) up -d --build
+	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) up -d --build
 
 down:
-	docker-compose -f $(DOCKER_COMPOSE) down
+	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) down
+
+################## RUN ALL ##################
+run-all:
+	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) -f $(DOCKER_COMPOSE_SERVICE) up -d --build
+
 
