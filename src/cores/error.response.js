@@ -32,6 +32,15 @@ class NotFoundError extends ErrorResponse {
   }
 }
 
+class TooManyRequestError extends ErrorResponse {
+  constructor(
+    message = ReasonPhrases.TOO_MANY_REQUESTS,
+    statusCode = StatusCodes.TOO_MANY_REQUESTS
+  ) {
+    super(message, statusCode);
+  }
+}
+
 class ConflictError extends ErrorResponse {
   constructor(message = ReasonPhrases.CONFLICT, statusCode = StatusCodes.CONFLICT) {
     super(message, statusCode);
@@ -53,4 +62,5 @@ module.exports = {
   ForbiddenError,
   UnauthorizedError,
   ConflictError,
+  TooManyRequestError,
 };

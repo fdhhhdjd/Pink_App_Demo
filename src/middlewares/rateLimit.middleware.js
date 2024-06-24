@@ -35,7 +35,7 @@ const customOptions = {
   max: 100,
   message: {
     status: StatusCodes.TOO_MANY_REQUESTS,
-    message: 'Custom Too Many Requests Message',
+    message: ReasonPhrases.TOO_MANY_REQUESTS,
   },
   standardHeaders: true,
 };
