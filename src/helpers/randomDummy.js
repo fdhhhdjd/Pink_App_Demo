@@ -23,26 +23,49 @@ function getRandomBatteryStatus() {
 }
 
 function getRandomCustomer() {
-  const customers = ['Nguyen Van A', 'Le Thi B', 'Tran Van C', 'Pham Thi D', 'Do Van E'];
+  const customers = [
+    'Nguyen Van A',
+    'Le Thi B',
+    'Tran Van C',
+    'Pham Thi D',
+    'Do Van E',
+    'Hoang Thi F',
+    'Nguyen Tuan G',
+    'Pham Van H',
+    'Bui Thi I',
+    'Doan Van J',
+  ];
   return customers[Math.floor(Math.random() * customers.length)];
 }
 
-function getRandomPrice() {
-  return getRandomInt(10000, 100000);
+function getRandomPrice(hours) {
+  // Adjust price based on hours
+  return hours * getRandomInt(8000, 12000); // Adjust min and max price per hour as needed
 }
 
 function getRandomDuration() {
-  const durations = ['1 hour', '2 hours', '4 hours', '6 hours'];
-  return durations[Math.floor(Math.random() * durations.length)];
+  const hours = getRandomInt(1, 24);
+  return `${hours} hour${hours > 1 ? 's' : ''}`;
 }
 
 function generateRandomVehicle(id) {
   const { latitude, longitude } = getRandomCoordinate();
   const status = getRandomStatus();
-  const customer_name = getRandomCustomer();
-  const unit_price = getRandomPrice();
-  const total_price = unit_price * getRandomInt(1, 6);
-  const rental_duration = getRandomDuration();
+  let customer_name = null;
+  let unit_price = null;
+  let total_price = null;
+  let rental_duration = null;
+
+  if (status === 2 || status === 3) {
+    // Đã có khách or Hết pin
+    customer_name = getRandomCustomer();
+    if (status === 3) {
+      // Hết pin: Generate price and rental duration
+      unit_price = getRandomPrice(getRandomInt(1, 24)); // Random price for random hours
+      total_price = unit_price * getRandomInt(1, 6);
+      rental_duration = getRandomDuration();
+    }
+  }
 
   return {
     device_id: `pink_app_${id}`,
