@@ -15,8 +15,7 @@
   // Auto fix ESLint issues on save
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit",
-    "source.removeUnused": "explicit"
+    "source.organizeImports": "explicit"
   },
   // Enable bracket pair colorization
   "editor.bracketPairColorization.enabled": true,

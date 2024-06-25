@@ -12,8 +12,16 @@ const REQUEST = {
   _MAX: 100,
 };
 
+const STATUS_VEHICLE = {
+  FREE: 1,
+  OCCUPIED: 2, // Đã có khách
+  OUT_OF_BATTERY: 3, // Hết pin
+  BROKEN: 4, // Hỏng
+};
+
 module.exports = {
   NODE_ENV,
   LIMIT,
   REQUEST,
+  STATUS_VEHICLE,
 };
