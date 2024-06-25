@@ -1,5 +1,7 @@
 'use strict';
 
+const validator = require('validator');
+
 const { BadRequestRequestError } = require('../../../cores/error.response');
 const { comparePassword } = require('../../../helpers/hashPassword');
 const { createToken } = require('../../../helpers/token');
@@ -11,7 +13,7 @@ class AuthService {
       throw new BadRequestRequestError('fields is required');
     }
 
-    if (!req.body.email) {
+    if (!req.body.email || !validator.isEmail(req.body.email)) {
       throw new BadRequestRequestError('Email is required');
     }
 
