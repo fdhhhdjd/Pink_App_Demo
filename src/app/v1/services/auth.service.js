@@ -52,9 +52,15 @@ class AuthService {
   }
 
   static async profile(req) {
-    return {
-      email: req.body.email,
-    };
+    const { id } = req.infoAccessToken;
+
+    const resultUser = await UserModels.getInfoUser({ id }, '*');
+
+    if (!resultUser) {
+      throw new BadRequestRequestError('User not found');
+    }
+
+    return resultUser;
   }
 }
 
