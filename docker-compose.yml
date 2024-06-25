@@ -26,26 +26,26 @@ services:
       retries: 3
 
   # Todo: Nginx
-  nginx:
-    container_name: nginx
-    build:
-      dockerfile: ./docker/nginx/Dockerfile
-      context: .
-    restart: always
-    env_file:
-      - .env
-    volumes:
-      - ./docker/nginx/conf.d:/etc/nginx/conf.d
-    ports:
-      - '${PORT_NGINX}:${PORT_NGINX}'
-    networks:
-      - service_pink_app-network
-    healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://${PORT_HOST_NGINX}']
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
+  # nginx:
+  #   container_name: nginx
+  #   build:
+  #     dockerfile: ./docker/nginx/Dockerfile
+  #     context: .
+  #   restart: always
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./docker/nginx/conf.d:/etc/nginx/conf.d
+  #   ports:
+  #     - '${PORT_NGINX}:${PORT_NGINX}'
+  #   networks:
+  #     - service_pink_app-network
+  #   healthcheck:
+  #     test: ['CMD', 'curl', '-f', 'http://${PORT_HOST_NGINX}']
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 5
+  #     start_period: 10s
 
 networks:
   service_pink_app-network:

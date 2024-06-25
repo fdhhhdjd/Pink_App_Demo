@@ -7,8 +7,6 @@ const {
 } = require('../configs/pg.config');
 const { NODE_ENV } = require('../constants');
 
-console.info(host, port, user, password, database);
-
 const URL_PG = `postgresql://${user}:${password}@${host}:${port}/${database}`;
 
 const client = {};
