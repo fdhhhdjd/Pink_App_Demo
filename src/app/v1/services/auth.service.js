@@ -62,7 +62,9 @@ class AuthService {
       throw new BadRequestRequestError('User not found');
     }
 
-    return resultUser;
+    const { password: _, ...rest } = resultUser;
+
+    return rest;
   }
 }
 

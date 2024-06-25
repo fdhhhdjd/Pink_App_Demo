@@ -5,6 +5,7 @@ const cors = require('cors');
 const express = require('express');
 const { default: helmet } = require('helmet');
 const morgan = require('morgan');
+const swaggerUi = require('swagger-ui-express');
 
 const app = express();
 require('dotenv').config();
@@ -14,6 +15,7 @@ const {
   app: { morgan: morganConfig, node },
 } = require('./configs/app.config');
 const { NODE_ENV, LIMIT } = require('./constants');
+const swaggerSpec = require('./helpers/swagger');
 const RateLimitIp = require('./middlewares/rateLimit.middleware');
 const { StatusCodes, ReasonPhrases } = require('./utils/httpStatusCode');
 
@@ -37,6 +39,9 @@ app.use(
 
 //* PG
 require('./dbs/init.knex').initDatabase();
+
+//* Docs
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 //* V1
 app.use('/api', require('./app/v1/routes'));

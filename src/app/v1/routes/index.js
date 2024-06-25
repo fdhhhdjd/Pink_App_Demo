@@ -19,5 +19,6 @@ router.get('/v1', async (_, res, __) => {
 
 // Todo: 1. Auth
 router.use('/v1/auth', require('./auth'));
+router.use('/v1/user', require('./user'));
 
 module.exports = router;
