@@ -1,6 +1,7 @@
 'use strict';
 
 const { BadRequestRequestError } = require('../../../cores/error.response');
+const { getListUser } = require('../../../helpers/randomUserDummy');
 const UserModels = require('../models/users.model');
 
 class UserService {
@@ -14,6 +15,10 @@ class UserService {
     }
 
     return resultUser;
+  }
+
+  static async listUser() {
+    return getListUser(20);
   }
 }
 

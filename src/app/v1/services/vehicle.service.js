@@ -1,6 +1,6 @@
 'use strict';
 
-const generateVehicleData = require('../../../helpers/randomDummy');
+const generateVehicleData = require('../../../helpers/randomVehicleDummy');
 
 class VehicleService {
   static async listVehicle() {

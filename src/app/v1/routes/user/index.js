@@ -13,4 +13,6 @@ router.use(AuthMiddleware.checkToken);
 
 router.get('/profile', AuthMiddleware.checkToken, asyncHandler(UserControllers.getProfile));
 
+router.get('/list', AuthMiddleware.checkToken, asyncHandler(UserControllers.listUser));
+
 module.exports = router;
