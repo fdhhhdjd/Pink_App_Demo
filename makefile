@@ -31,6 +31,7 @@ down:
 ################## RUN ALL ##################
 build-all:
 	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) -f $(DOCKER_COMPOSE_SERVICE) up -d --build
+
 down-all:
 	docker-compose -f $(DOCKER_COMPOSE_SYSTEM) -f $(DOCKER_COMPOSE_SERVICE) down
 

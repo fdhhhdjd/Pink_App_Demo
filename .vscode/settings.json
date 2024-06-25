@@ -16,7 +16,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit",
-    "source.removeUnused": true
+    "source.removeUnused": "explicit"
   },
   // Enable bracket pair colorization
   "editor.bracketPairColorization.enabled": true,
