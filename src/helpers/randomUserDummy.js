@@ -1,3 +1,5 @@
+const { v4: uuidv4 } = require('uuid');
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -123,6 +125,7 @@ function getListUser(count = 30) {
   for (let i = 0; i < count; i++) {
     const { full, name } = generateFullname();
     const user = {
+      id: `pink_app_${uuidv4().split('-')[0]}`,
       customer_name: full,
       phone_number: generatePhoneNumber(),
       email: generateEmail(name),

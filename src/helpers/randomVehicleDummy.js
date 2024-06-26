@@ -1,3 +1,19 @@
+const { faker } = require('@faker-js/faker');
+
+const electricVehicleTypes = [
+  0, // Vinfast VF e34
+  1, // Tesla Model S
+  2, //Kia Soul EV
+  3, //'MG ZS EV',
+  4, //'Volkswagen ID.3',
+  5, //'Hyundai Kona Electric',
+  6, //'Honda E',
+  7, //'Nissan Leaf',
+  8, //'Peugeot E-208',
+  9, //'Polestar 2',
+  10, //'Tesla Model 3',
+];
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -74,6 +90,7 @@ function generateRandomVehicle(id) {
     customer_name,
     unit_price,
     total_price,
+    vehicle_type: faker.helpers.arrayElement(electricVehicleTypes),
     rental_duration,
     latitude,
     longitude,

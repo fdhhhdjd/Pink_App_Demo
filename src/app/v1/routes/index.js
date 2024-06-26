@@ -21,5 +21,6 @@ router.get('/v1', async (_, res, __) => {
 router.use('/v1/auth', require('./auth'));
 router.use('/v1/user', require('./user'));
 router.use('/v1/vehicle', require('./vehicle'));
+router.use('/v1/order', require('./order'));
 
 module.exports = router;
