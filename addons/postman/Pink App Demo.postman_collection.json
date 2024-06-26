@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "f63ce40c-c392-4898-9cfb-66fab218c40a",
+		"name": "Pink App Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17440086",
+		"_collection_link": "https://www.postman.com/nguyentientai/workspace/demo/collection/17440086-f63ce40c-c392-4898-9cfb-66fab218c40a?action=share&source=collection_link&creator=17440086"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@gmail.com\",\n    \"password\":\"user@password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://pinkapp.lol/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"pinkapp",
+						"lol"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoxMCwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxOTI5MTcyMywiZXhwIjoxNzUwODQ5MzIzfQ.1Gsy-ojeHJn8Mfo2GZTFKcFbtj6ClK1aognp88o4Fwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pinkapp.lol/api/v1/user/profile",
+					"protocol": "http",
+					"host": [
+						"pinkapp",
+						"lol"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vehicle List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoxMCwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxOTI5MTcyMywiZXhwIjoxNzUwODQ5MzIzfQ.1Gsy-ojeHJn8Mfo2GZTFKcFbtj6ClK1aognp88o4Fwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pinkapp.lol/api/v1/vehicle/list",
+					"protocol": "http",
+					"host": [
+						"pinkapp",
+						"lol"
+					],
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoxMCwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxOTI5MTcyMywiZXhwIjoxNzUwODQ5MzIzfQ.1Gsy-ojeHJn8Mfo2GZTFKcFbtj6ClK1aognp88o4Fwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pinkapp.lol/api/v1/order/list",
+					"protocol": "http",
+					"host": [
+						"pinkapp",
+						"lol"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoxMCwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxOTI5MTcyMywiZXhwIjoxNzUwODQ5MzIzfQ.1Gsy-ojeHJn8Mfo2GZTFKcFbtj6ClK1aognp88o4Fwo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://pinkapp.lol/api/v1/user/list",
+					"protocol": "http",
+					"host": [
+						"pinkapp",
+						"lol"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
