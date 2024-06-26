@@ -60,8 +60,7 @@ function getRandomPrice(hours) {
 }
 
 function getRandomDuration() {
-  const hours = getRandomInt(1, 24);
-  return `${hours} hour${hours > 1 ? 's' : ''}`;
+  return getRandomInt(1, 24);
 }
 
 function generateRandomVehicle(id) {
