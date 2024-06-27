@@ -60,8 +60,8 @@ const staffPointsOfInterest = [
   {
     device_id: `pink_app_${uuidv4().split('-')[0]}`,
     point_type: POINTS_OF_INTEREST.PARK,
-    latitude: 12.270732,
-    longitude: 109.148148,
+    latitude: 12.276514,
+    longitude: 109.133205,
   },
   {
     device_id: `pink_app_${uuidv4().split('-')[0]}`,
