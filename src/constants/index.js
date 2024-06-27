@@ -19,9 +19,17 @@ const STATUS_VEHICLE = {
   BROKEN: 4, // Hỏng
 };
 
+const POINTS_OF_INTEREST = {
+  POS: 10, //'PoS', // Điểm bán/sạc
+  PARK: 20, //'Park', // Điểm đỗ xe
+  REPAIR_STATION: 30, //'Repair Station', // Trạm sửa chữa
+  WAREHOUSE: 40, // 'Warehouse', // Kho
+};
+
 module.exports = {
   NODE_ENV,
   LIMIT,
   REQUEST,
   STATUS_VEHICLE,
+  POINTS_OF_INTEREST,
 };

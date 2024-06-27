@@ -22,5 +22,6 @@ router.use('/v1/auth', require('./auth'));
 router.use('/v1/user', require('./user'));
 router.use('/v1/vehicle', require('./vehicle'));
 router.use('/v1/order', require('./order'));
+router.use('/v1/point', require('./point'));
 
 module.exports = router;
