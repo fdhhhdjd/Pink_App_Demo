@@ -32,7 +32,7 @@ class RateLimiter {
 
 const customOptions = {
   windowMs: 10 * 60 * 1000, // 10 minutes
-  max: 100,
+  max: 300,
   message: {
     status: StatusCodes.TOO_MANY_REQUESTS,
     message: ReasonPhrases.TOO_MANY_REQUESTS,
